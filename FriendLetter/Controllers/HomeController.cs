@@ -4,9 +4,14 @@ namespace FriendLetter.Controllers
 {
     public class HomeController : Controller
     {
-        // we extend from built in controller class
+        // the Route is a decorator
+        [Route("/hello")]
         public string Hello() { return "Hello Friend!"; }
 
-        public string GoodBye() { return "Goodbye Friend"; }
+        [Route("/goodbye")]
+        public string Goodbye() { return "Goodbye Friend"; }
+
+        [Route("/")]
+        public string Letter() { return "our virtual postcard will go here soon!"; }
     }
 }
