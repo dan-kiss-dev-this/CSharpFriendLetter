@@ -13,6 +13,10 @@ namespace FriendLetter
 
             WebApplication app = builder.Build();
 
+            // get to see Developer exception page through LaunchSettings.json, first profile aka dev is default
+            // to run the prod profile do $dotnet watch run --launch-profile "production"
+            // app.UseDeveloperExceptionPage();
+
             app.UseRouting();
 
             app.MapControllerRoute(
